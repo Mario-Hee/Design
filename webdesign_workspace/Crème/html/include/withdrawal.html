@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>크렘므: 회원탈퇴</title>
+	<link rel="icon" type="image/png" href="../../img/favicon.png">
 	<style type="text/css">
 		* {
 			font-size: 12px;
@@ -221,10 +222,10 @@
 			background-color: #fff;
 			color: #444;
 		}
-		.info_user .tixt_agree {
+		.info_user .txt_agree {
 			display: block;
 			margin-right: 30px;
-			font-size: 14px;
+			font-size: 13px;
 			line-height: 24px;
 			letter-spacing: -1px;
 		}
@@ -238,6 +239,8 @@
 		}
 		.info_user .emph_g {
 			color: #f46665;
+			font-size: 15px;
+			font-weight: bold;
 		}
 		.lab_check {
 			display: block;
@@ -246,6 +249,11 @@
 			height: 40px;
 			padding-top: 40px;
 			text-align: center;
+		}
+		.info_user > .check_notice {
+			position: absolute;
+			top: 0;
+			right: 20px;
 		}
 		.check_notice {
 			display: inline-block;
@@ -256,33 +264,106 @@
 		.check_notice > input {
 			visibility: hidden;
 		}
+		.info_detail .id, .pw {
+			position: relative;
+			padding-left: 10px;
+			font-size: 15px;
+			font-weight: bold;
+		}
+		.input_id {
+			font-size: 15px;
+			padding-left: 33px;
+		}
+		.input_pw {
+			position: relative;
+			left: 17px;
+			font-size: 15px;
+			padding-left: 16px;
+		}
+		.info_cremeid {
+			padding-bottom: 13px;
+		}
 		.wrap_btn {
 			width: 100%;
 			padding: 20px 0 70px;
-			overflow: hidden;
 			text-align: center;
 		}
 		.btn_cancel {
-			width: 93px;
+			width: 104px;
 			height: 46px;
 			margin-right: 2px;
-			background-position: -100px -360px;
 		}
 		.btn_comm {
 			display: inline-block;
-			overflow: hidden;
-			background-image: url(../../img/btn_comm_160425.gif) 0 0 no-repeat;
 			font-size: 0;
-			line-height: 0;
-			vertical-align: top;
 		}
 		.btn_next {
 			width: 97px;
 			height: 46px;
-			font-size: 0;
-			text-indent: 0;
 			line-height: 0;
-			background-position: -320px -150px;
+		}
+		.cancel {
+			display: inline-block;
+			width: 100px;
+			height: 45px;
+			font-size: 14px;
+			font-weight: bold;
+			color: #34495e;
+			line-height: 42px;
+			background-color: white;
+			border: 1px solid #D1D1D1;
+			border-radius: 4px;
+		}
+		.out {
+			display: inline-block;
+			width: 100px;
+			height: 45px;
+			font-size: 14px;
+			font-weight: 20px;
+			font-weight: bold;
+			color: white;
+			line-height: 42px;
+			background-color: #34495e;
+			border: 1px solid #D1D1D1;
+			border-radius: 4px;
+		}
+		.info_user > .tit_agree {
+			font-size: 16px;
+			font-weight: 800;
+		}
+		.info_user > .txt_agree {
+			font-size: 13px;
+		}
+		#minicreme {
+			position: absolute;
+			top: -3px;
+			left: 689px;
+			width: 100%;
+			height: 40px;
+			letter-spacing: -1px;
+		}
+		#minicreme .minicreme_logo {
+			display: inline;
+			float: left;
+			margin: 11px 12px 0 -226px;
+		}
+		strong {
+			font-weight: bold;
+		}
+		.img_logo {
+			display: block;
+			overflow: hidden;
+			padding-left: 0 0 0;
+			width: 65px;
+			height: 17px;
+			background: url(../../img/logo_transparent2.png) no-repeat;
+			background-size: 73px;
+			text-indent: -9999px;
+		}
+		#minicreme a {
+			color: #222;
+			text-decoration: none;
+			height: 57px;
 		}
 		#footer {
 			padding: 15px 0;
@@ -436,23 +517,33 @@
 											<span class="input_id">mariohee</span>
 									</div>
 								<div class="info_detail info_pwreconfirm">
-										<span class="pswd">비밀번호</span>
-										<input type="paswoed" id="pw" name="pw" placeholder="비밀번호">
+										<span class="pw">비밀번호</span>
+										<input type="password" id="pw" class="input_pw" name="pw" placeholder="비밀번호">
 								  </div>
+								</div>
+							</div>
+							<div id="minicreme">
+								<strong class="minicreme_logo">
+									<a href="#" target="_top" class="img_logo">creme</a>
+								</strong>
+								<div id="minicreme_user" class="minicreme_login">
+									<a href="#" target="_top" class="minicreme_nick" id=""></a>
 								</div>
 							</div>
 						</div>
 					</form>
 				</div>
 			</div>
-			<div class="wrap_btn">
-				<a href="#" class="btn_comm btn_cancel">
-				<span class="screen_out">탈퇴취소</span>
-				</a>
-				<button type="submit" class="btn_comm btn_next">
-				<span class="screen_out">탈퇴</span>
-				</button>
-			</div>
+			<form name="" method="" action="">
+				<div class="wrap_btn">
+					<a href="#" class="btn_comm btn_cancel">
+					<span class="cancel">탈퇴 취소</span>
+					</a>
+					<a href="#" class="btn_comm btn_next">
+					<span class="out">탈퇴</span>
+					</a>
+				</div>
+			</form>
 		</div>
 			<footer>
 			<div id="footer">

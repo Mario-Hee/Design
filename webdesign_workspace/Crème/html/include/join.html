@@ -335,8 +335,24 @@
 							</span>
 							<span class="error_next_box">필수 정보입니다.</span>
 						</div>
-					</div>
 
+						<div class="join_row">
+							<h3 class="join_title">
+								<label for="addr">주소</label>
+							</h3>
+							<span class="ps_box">
+								<input type="text" id="sample6_postcode" class="int" placeholder="우편번호">
+								<input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+							</span>
+							<span class="ps_box">
+								<input type="text" id="sample6_address" class="int" placeholder="주소"><br>
+							</span>
+							<span class="ps_box">
+								<input type="text" id="sample6_detailAddress" class="int" placeholder="상세주소">
+							</span>
+							<span class="error_next_box">필수 정보입니다.</span>
+						</div>
+					</div>
 					<div class="btn_double_area">
 						<span><a href="#" class="btn_type btn_agree">가입하기</a></span>
 					</div>
@@ -367,4 +383,38 @@
 		</footer>
 	</div>
 </body>
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+    function sample6_execDaumPostcode() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                var addr = '';
+                var extraAddr = '';
+
+                if (data.userSelectedType === 'R') { 
+                    addr = data.roadAddress;
+                } else { 
+                    addr = data.jibunAddress;
+                }
+                if(data.userSelectedType === 'R'){
+                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                        extraAddr += data.bname;
+                    }
+                    if(data.buildingName !== '' && data.apartment === 'Y'){
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    if(extraAddr !== ''){
+                        extraAddr = ' (' + extraAddr + ')';
+                    }
+                    document.getElementById("sample6_extraAddress").value = extraAddr;
+                } else {
+                    document.getElementById("sample6_extraAddress").value = '';
+                }
+                document.getElementById('sample6_postcode').value = data.zonecode;
+                document.getElementById("sample6_address").value = addr;
+                document.getElementById("sample6_detailAddress").focus();
+            }
+        }).open();
+    }
+</script>
 </html>
