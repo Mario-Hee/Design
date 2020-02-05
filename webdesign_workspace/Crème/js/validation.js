@@ -40,6 +40,7 @@ var joinValidate = {
 			code: 0,
 			desc: '사용가능한 비밀번호입니다.'
 		},
+		// 비밀번호 재확인도 통과 equal
 		equal_success_pw : {
 			code: 10,
 			desc: '사용가능한 비밀번호입니다.'
@@ -128,6 +129,7 @@ var joinValidate = {
 		var regEmpty = /\s/g;   // 공백문자
 		var regEtc = /[~'!@#$%^&*()+=\|\\\{\}\[\]:";'<>.,?//]/g;  // 특수문자
 		var regId = /[^a-z0-9-_.]+/g;  // 올바른 아이디 형식
+
 		if (id == '' || id.length == 0) { //1.값이 있는지 없는지 체크
 			return this.resultCode.empty_val;
 
@@ -150,6 +152,7 @@ var joinValidate = {
 			return this.resultCode.success_id;
 		} 
 	},
+	// 비밀번호 유효성 체크
 	checkPw : function(pw, rpw) {
 		var regEmpty = /\s/g;   // 공백문자
 		var regPw = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&_*-]).{8,}$/;
@@ -185,6 +188,7 @@ var joinValidate = {
 			// 비밀번호랑 재확인 값이 없을때 통과한다.
 		}
 	},
+	// 비밀번호 재확인 유효성 체크
 	checkRpw : function(pw, rpw, pwFlag) {
 		// 비밀번호의 유효성체크를 통과한 값과
 		// 비밀번호 재확인 값이 같다면
@@ -204,6 +208,7 @@ var joinValidate = {
 			} 
 		}
 	},
+	// 이름 유효성 체크
 	checkName : function(name) {
 		var regEmpty = /\s/g;   // 공백문자
 		var regName = /^[a-zA-Z가-힣]+$/;
@@ -224,6 +229,7 @@ var joinValidate = {
 			return this.resultCode.success_name;
 		}
 	},
+	// 전화번호 유효성 체크
 	checkPhone : function(phone) {
 		var regEmpty = /\s/g;
 		var regPhone = /^01([0|1|6|7|8|9])([0-9]{3,4})([0-9]{4})$/g;
@@ -241,6 +247,7 @@ var joinValidate = {
 			return this.resultCode.success_phone;
 		}
 	},
+	// 이메일 유효성 체크
 	checkEmail : function(email, emailId) {
 		var regEmpty = /\s/g;
 		var regEmail = /^[-A-Za-z0-9_]+[-A-Za-z0-9_.]*[@]{1}[-A-Za-z0-9_]+[-A-Za-z0-9_.]*[.]{1}[A-Za-z]{1,5}$/g;
@@ -258,6 +265,7 @@ var joinValidate = {
 			return this.resultCode.success_email;
 		}
 	},
+	// 주소 유효성 체크
 	checkAddr : function(addrDtail, addrPost) {
 		// 영어대문자, 영어소문자, 한글, -, 공백외에 전부 체크
 		var regAddr = /^[a-zA-Z0-9가-힣-\s]+$/;

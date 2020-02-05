@@ -45,7 +45,11 @@ a {
 		button.btn-basic:hover {
 			color: #1D292C;
 			background-color: #95A5C3;
-
+		}
+		button.btn_agree {
+			font-weight: bold;
+			color: white;
+			background-color: #95A5C3;
 		}
 		button.btn-primary {
 			background-color: #CAD8E7;
