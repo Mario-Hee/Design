@@ -256,13 +256,10 @@
 		.inp_login {
 			position: relative;
 			padding-left: 44px;
-			border: 1px solid #8f8f8f;
+			border: 2px solid #8f8f8f;
 			color: #333333;
 			margin: 10px 0 0;
 			padding: 0 0 0 14px;
-		}
-		.inp_login {
-
 		}
 		.member .box .login .input-info div .icon {
 			position: absolute;
@@ -524,7 +521,7 @@
 			<div class="header_content">
 				<div class="header_content_logo">
 					<a href="#">
-						<img class="header_content_logo_img" src="../..//img/logo_transparent.png" alt="로고이미지">
+						<img class="header_content_logo_img" src="../../img/logo_transparent.png" alt="로고이미지">
 						<span class="header_content_logo_text"></span>
 					</a>
 				</div>
@@ -679,7 +676,9 @@
 			$(this).html('<i class="fas fa-eye"></i>')
 				    .css('color', '#666');
 		} else {
-
+			$(this).prev().attr('type', 'password');
+			$(this).html('<i class="fas fa-eye-slash"></i>')
+				    .css('color', '#aaa');
 		}
 		
 	});
