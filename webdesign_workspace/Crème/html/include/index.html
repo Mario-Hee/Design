@@ -4,12 +4,14 @@
 	<title>index.html</title>
 	<link rel="stylesheet" type="text/css" href="../../css/common.css">
 	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Gothic+A1&display=swap');
+
 		div.content_wrap {
 			width: 100%;
 			background-color: white;
 		}
 		div.content {
-			width: 1700px;
+			width: 1400px;
 			margin: 0 auto;
 			border: 1px solid red;
 		}
@@ -21,7 +23,7 @@
 
 		/* Slideshow container */
 		.slideshow-container {
-		  max-width: 1000px;
+		  max-width: 1700px;
 		  position: relative;
 		  margin: auto;
 		}
@@ -83,31 +85,78 @@
 		@media only screen and (max-width: 300px) {
 		  .text {font-size: 11px}
 		}
-		.inner_slide {
-			clear: both;
-			display: block;
-			position: relative;
-			width: 100%;
+		#cr_main {
+			width: auto;
 			height: auto;
-			padding: 80px 0 120px;
-			min-width: 1000px;
-			margin: 0 auto;
-			background: #fff;
+			text-align: center;
+			background-size: contain;
+			border: 1px solid blue;
 		}
-		.inner_wrap {
-			height: 460px;
+		#cr_blank {
+			width: 920px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 10px
 		}
-		.display_list {
-			padding-right: 280px;
+		#cr_mid_center {
+			width: 1149px;
+			height: 620px;
+			margin-left: auto;
+			margin-right: auto;
+			border: 1px solid blue;
 		}
-		h2{
-			border: 0;
-			padding: 0;
-			margin: 0 0 25px 0;
-			font-size: 42px;
-			line-height: 44px;
-			font-family: ;
+		#cr_mid_01 {
+			float: left;
+			display: inline-block;
+		}
+		#cr_main_desc {
+			text-align: left;
+		}
+		#cr_span {
+			display: block;
+			color: #1D292C;
+			white-space: normal;
+			font-weight: bold;
+			font-size: 25px;
+			text-transform: uppercase;
+			font-family: 'Gothic A1', sans-serif;
+		}
+		a {
 			color: #333;
+			text-decoration: none;
+		}
+		#cr_bot_01 {
+			display: inline-block;
+			border: 1px solid blue;
+		}
+		#cr_main_desc {
+			text-align: left;
+		}
+		#cr_goods {
+			width: 480px;
+			border: 1px solid green;
+		}
+		img {
+			border: 0 none;
+			vertical-align: top;
+		}
+		#cr_mid_02 {
+			width: 35px;
+			height: 100%;
+			float: left;
+			display: inline-block;
+		}
+		#cr_mid_03 {
+			width: 551px;
+			height: 100%;
+			display: inline-block;
+			border: 1px solid blue;
+		}
+		#cr_video_text {
+			color: #1D292C;
+			font-size: 21px;
+			font-weight: bold;
+			font-family: 'Gothic A1', sans-serif;
 		}
 
 	</style>
@@ -118,20 +167,20 @@
 			<div class="slideshow-container">
 			<div class="mySlides fade">
 			  <div class="numbertext">1 / 3</div>
-			  <img src="../../img/soap-862389_1920.jpg" style="width:100%">
-			  <div class="text">Caption One</div>
+			  <img src="../../img/creme-banner1.png" style="width:1400px;height: 600px;">
+			  <!-- <div class="text">Caption One</div> -->
 			</div>
 
 			<div class="mySlides fade">
 			  <div class="numbertext">2 / 3</div>
-			  <img src="../../img/soap-4017608_1920.jpg" style="width:100%">
-			  <div class="text">Caption Two</div>
+			  <img src="../../img/creme_banner2.png" style="width:1400px;height: 600px;">
+			  <!-- <div class="text">Caption Two</div> -->
 			</div>
 
 			<div class="mySlides fade">
 			  <div class="numbertext">3 / 3</div>
-			  <img src="../../img/soaps-2958985_1920.jpg" style="width:100%">
-			  <div class="text">Caption Three</div>
+			  <img src="../../img/creme_banner3.png" style="width:1400px;height: 600px;">
+			  <!-- <div class="text">Caption Three</div> -->
 			</div>
 			</div>
 			<br>
@@ -140,21 +189,79 @@
 			  <span class="dot"></span> 
 			  <span class="dot"></span> 
 			</div>
-
-			<div class="inner_slide">
-				<div class="inner_wrap">
-					<div class="display_list">
-						<h2>
-							<span>나만 알고 싶은 향기</span>
-						</h2>
-						<div class="bx-wrapper" style="max-width: 880px;">
-							
+						<div id="cr_main">
+					<div id="cr_blank"></div>
+					<div id="cr_mid_center">
+						<div id="cr_mid_01">
+							<div id="cr_main_desc">
+								<span id="cr_span">CREME 브랜드 소개</span>
+							</div>
+							<div style="height: 5px;"></div>
+							<div>
+								<a href="#">
+									<img src="../../img/soap-1665757_1920.jpg" style="width: 555px; height: 583px; object-fit: cover;" alt="브랜드 소개" title="브랜드 소개">
+								</a>
+							</div>
+							<div style="height: 25px;"></div>
+							<div id="cr_bot_01">
+								<div id="cr_main_desc">
+									<span id="cr_span">1라인 컬렉션</span>
+								</div>
+								<div style="height: 5px;"></div>
+								<div id="cr_goods">
+									<a href="#">
+										<img src="../../img/3616983426_594640e908_c.jpg" style="width: 428px; height: 169px; object-fit: cover;">
+									</a>
+								</div>
+								<div style="height: 25px;"></div>
+								<div id="cr_main_desc">
+									<span id="cr_span">2라인 컬렉션</span>
+								</div>
+								<div style="height: 5px;"></div>
+								<div id="cr_goods">
+									<a href="#">
+										<img src="../../img/3616983426_594640e908_c.jpg" style="width: 428px; height: 169px; object-fit: cover;">
+									</a>
+								</div>
+								<div style="height: 25px;"></div>
+							</div>
+						</div>
+						<div id="cr_mid_02"></div>
+						<div id="cr_mid_03">
+							<div id="cr_main_desc">
+								<span id="cr_span">CAMPAIGN</span>
+							</div>
+							<div style="height: 5px;"></div>
+							<div>
+								<a href="#">
+									<img src="../../img/gift-1917075_1920.jpg" alt="캠페인" title="캠페인"  style="width: 549px; height: 280px; object-fit: cover;">
+								</a>
+							</div>
+							<div style="height: 5px;"></div>
+							<div id="cr_main_desc">
+								<span id="cr_span">NEW</span>
+							</div>
+							<div style="height: 5px;"></div>
+							<div>
+								<a href="#">
+									<img src="../../img/oil-discharge-2794477_640.jpg" alt="신제품" title="신제품" style="width: 549px; height: 262px; object-fit: cover;">
+								</a>
+							</div>
+							<div style="height: 22px;"></div>
+							<div>
+								<video oncontextmenu="return false;" id="myVideo" width="550" controls autoplay>
+								 	<source src="../../img/Tree - 12687.mp4" type="video/mp4">
+								</video>
+							</div>
+							<div style="height: 17px;"></div>
+							<div id="cr_main_desc">
+								<span id="cr_video_text">크렘므는 프래그런스 라이프 스타일 브랜드입니다. 당신의 일상을 풍요롭게 할 향기와 건강한 피부를 위해 자연과 시간의 힘으로 피부 타입에 가장 친화적인 아이템을 개발하고, 개념이 다른 라이프 스타일을 창조하기 위해 끊임없이 노력합니다.</span>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 		</div>
-    </div>
+	</div>
 </body>
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -178,5 +285,49 @@ function showSlides() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
+
+
+	// video 플레이 이벤트
+	$(document).ready(function() {
+
+	    $("#playBtn").on("click", function() {
+
+	        $("#myVideo").trigger("play");
+
+	    });
+
+	});
+
+	// video 풀 스크린 
+	$(document).ready(function() {
+
+    $("#fullBtn").on("click", function() {
+
+        var elem = document.getElementById("myVideo");
+
+        if(elem.requestFullscreen) {
+
+            elem.requestFullscreen();
+
+        } else if(elem.mozRequestFullScreen) {
+
+            elem.mozRequestFullScreen();
+
+        } else if (elem.webkitRequestFullscreen) {
+
+            elem.webkitRequestFullscreen();
+
+        } else if (elem.msRequestFullscreen) {
+
+            elem.msRequestFullscreen();
+
+        }
+
+    });
+
+});
+
+
+
 	</script>
 </html>
